@@ -14,7 +14,7 @@ namespace Nikita_TasksAttributes
         {
             User.Registration();
 
-            var programmer = new Programmer("Steve", "Wazowski", 5);
+            var programmer = new Programmer("Mike", "Wazowski", 5);
             Company.ShowWorkers(programmer);
             Company.ShowOrders(programmer);
 
