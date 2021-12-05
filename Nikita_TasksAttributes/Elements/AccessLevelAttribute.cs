@@ -21,9 +21,9 @@ namespace Nikita_TasksAttributes.Elements
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     class AccessLevelAttribute : Attribute
     {
-        public readonly AccessLevel AccessLevel;
+        public readonly AccessLevel Level;
 
-        public AccessLevelAttribute(AccessLevel accessLevel) => AccessLevel = accessLevel;
+        public AccessLevelAttribute(AccessLevel accessLevel) => Level = accessLevel;
     }
 
 
