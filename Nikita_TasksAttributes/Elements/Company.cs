@@ -15,7 +15,7 @@ namespace Nikita_TasksAttributes.Elements
         public static int AmountOfWorkers { get; private set; } = 211;
         public static int AmountOfOrders { get; private set; } = 5;
 
-        private static bool GetAccess(IWorker worker, AccessLevel accessLevel) => (worker.GetType().GetCustomAttribute(typeof(AccessLevelAttribute)) as AccessLevelAttribute).AccessLevel >= accessLevel;
+        private static bool GetAccess(IWorker worker, AccessLevel accessLevel) => (worker.GetType().GetCustomAttribute(typeof(AccessLevelAttribute)) as AccessLevelAttribute).Level >= accessLevel;
 
         public static void ShowIncome(IWorker worker) => Console.WriteLine(GetAccess(worker, AccessLevel.Manager) ? $"Привет, {worker.Name}, доход компании => {Company.Income} шекелей" : "Отказано в доступе");
 
